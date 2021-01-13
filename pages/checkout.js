@@ -14,7 +14,6 @@ import {
     useElements,
 } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
-import CheckoutWithContext from '../../../Courses/next-courses-web/pages/checkout'
 
 const stripePromise = loadStripe("xxx-xxx-xxx")
 

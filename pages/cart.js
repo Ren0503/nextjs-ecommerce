@@ -6,8 +6,8 @@ import { FaTimes, FaLongArrowAltRight } from 'react-icons/fa'
 import { SiteContext, ContextProviderComponent } from '../context/mainContext'
 import QuantityPicker from '../components/core/QuantityPicker'
 import DENOMINATION from '../provider/currencyProvider'
-import { CartLink } from '../components/core/CartLink'
-import { Image } from '../components/core/Image'
+import CartLink from '../components/core/CartLink'
+import Image from '../components/core/Image'
 
 const Cart = ({ context }) => {
     const [renderClientSideComponent, setRenderClientSideComponent] = useState(false)
