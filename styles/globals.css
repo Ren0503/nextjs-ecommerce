@@ -1,16 +1,31 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Eina";
+  src: url("/fonts/Eina.otf");
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+
+@font-face {
+  font-family: "Eina Light";
+  src: url("/fonts/Eina-Light.otf");
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "Eina SemiBold";
+  src: url("/fonts/Eina-SemiBold.otf");
+}
+
+@layer base {
+  p, h1, h2, h3, h4, h5 {
+    color: rgba(0, 0, 0, .8);
+    font-family: Eina;
+  }
+}
+
+.Toastify__progress-bar--default {
+  background: #89bdf9 !important;
 }
