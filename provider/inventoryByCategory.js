@@ -1,5 +1,3 @@
-import inventory from "../api/inventory";
-
 function inventoryByCategory(inventory) {
     return inventory.reduce((acc, next) => {
         const categories = next.categories

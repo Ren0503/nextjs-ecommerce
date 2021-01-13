@@ -4,16 +4,16 @@ function slugify(string) {
     const p = new RegExp(a.split('').join('|'), 'g')
 
     return string.toString().toLowerCase()
-        .replace(/\s+/g, '-')                       // Replace space with -
-        .replace(p, c => b.charAt(a.indexOf(c)))    // Replace special characters
-        .replace(/&/g, '-and-')                     // Replace & with 'and'
-        .replace(/[^\w]+/g, '')                     // Remove all non-word characters
-        .replace(/--+/g, '-')                       // Replace multiple - with single -
-        .replace(/^-+/, '')                         // Trim - from start of text
-        .replace(/-+$/, '')                         // Trim - from end of text
+        .replace(/\s+/g, '-') // Replace spaces with -
+        .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+        .replace(/&/g, '-and-') // Replace & with 'and'
+        .replace(/[^\w-]+/g, '') // Remove all non-word characters
+        .replace(/--+/g, '-') // Replace multiple - with single -
+        .replace(/^-+/, '') // Trim - from start of text
+        .replace(/-+$/, '') // Trim - from end of text
 }
 
-function titleIfy(slug){
+function titleIfy(slug) {
     var words = slug.split('-')
     for (var i = 0; i < words.length; i++) {
         var word = words[i]
@@ -23,7 +23,7 @@ function titleIfy(slug){
 }
 
 function getTrimmedString(string, length = 8) {
-    if(string.length <= length) {
+    if (string.length <= length) {
         return string
     } else {
         return string.substring(0, length) + '...'
