@@ -14,7 +14,7 @@ import {
 
 const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
     const inventory = inventoryData.slice(0, 4)
-    const categories = categoryData.slice(0, 2)
+    const categories = categoryData.slice(0, 3)
 
     return (
         <>
@@ -29,7 +29,7 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
                     <div className="pt-4 pl-2 sm:pt-12 sm:pl-12 flex flex-col">
                         <Tag 
                             year="2021"
-                            category="SOFAS"
+                            category="Shirts"
                         />
                         <Center 
                             price="200"
@@ -37,7 +37,7 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
                             link={`/product/${slugify(inventory[2].name)}`}
                         />
                         <Footer 
-                            designer="Jason Bourne"
+                            designer="Ren Lee"
                         />
                     </div>
                     <div className="flex flex-1 justify-center items-center relative">
@@ -48,7 +48,7 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
                     </div>
                 </div>
             </div>
-            <div className="lg:my-8 lg:grid-cols-2 grid-cols-1 grid gap-4 my-4">
+            <div className="lg:my-8 lg:grid-cols-3 grid-cols-1 grid gap-4 my-4">
                 <DisplayMedium
                     imageSrc={categories[0].image}
                     subtitle={`${categories[0].itemCount} items`}
@@ -60,6 +60,12 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
                     subtitle={`${categories[1].itemCount} items`}
                     title={titleIfy(categories[1].name)}
                     link={`/category/${slugify(categories[1].name)}`} 
+                />
+                <DisplayMedium
+                    imageSrc={categories[2].image}
+                    subtitle={`${categories[2].itemCount} items`}
+                    title={titleIfy(categories[2].name)}
+                    link={`/category/${slugify(categories[2].name)}`} 
                 />
             </div>
             <div className="pt-10 pb-6 flex flex-col items-center">

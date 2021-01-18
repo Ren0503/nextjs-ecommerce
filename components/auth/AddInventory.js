@@ -66,7 +66,7 @@ class AddInventory extends React.Component {
                     <div className="w-full max-w-144">
                         <form className="bg-white shadow-xs rounded px-8 pt-6 pb-8 mb-4">
                             <div className="mb-4">
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                                <label className="block text-sm font-bold mb-2" htmlFor="name">
                                     Item name
                                 </label>
                                 <input 

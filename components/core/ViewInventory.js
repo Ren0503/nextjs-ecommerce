@@ -66,7 +66,7 @@ class ViewInventory extends React.Component {
                                         </Link>
                                         <input 
                                             onChange={(e) => this.onChange(e, index)}
-                                            className="ml-8 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                            className="ml-8 shadow appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                                             value={currentItem.name}
                                             placeholder="Item name"
                                             name="name"
@@ -75,20 +75,20 @@ class ViewInventory extends React.Component {
                                             <p className="m-0 text-sm mr-2">In stock : </p>
                                             <input 
                                                 onChange={this.onChange}
-                                                className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                                className="shadow appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                                                 value={currentItem.currentInventory}
                                                 name="currentInventory"
                                                 placeholder="Item inventory"
                                             />
                                             <input 
                                                 onChange={this.onChange}
-                                                className="ml-16 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                                className="ml-16 shadow appearance-none border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                                                 value={currentItem.price}
                                                 name="price"
                                                 placeholder="Item price"
                                             />
                                         </div>
-                                        <div role="button" onClick={() => this.saveItem(index)} className="m-0 ml-10 text-gray-900 text-s cursor-pointer">
+                                        <div role="button" onClick={() => this.saveItem(index)} className="m-0 ml-10 text-s cursor-pointer">
                                             <p className="text-sm ml-10 m-0">Save</p>
                                         </div>
                                     </div>
@@ -105,18 +105,18 @@ class ViewInventory extends React.Component {
                                     </Link>
                                     <Link href={`/product/${slugify(item.name)}`}>
                                         <a>
-                                            <p className="m-0 pl-10 text-gray-600 text-sm">
+                                            <p className="m-0 pl-10 text-sm">
                                                 {item.name}
                                             </p>
                                         </a>
                                     </Link>
                                     <div className="flex flex-1 justify-end">
-                                        <p className="m-0 pl-10 text-gray-900 text-sm">In stock : {item.currentInventory}</p>
-                                        <p className="m-0 pl-20 text-gray-900 font-semibold">
+                                        <p className="m-0 pl-10 text-sm">In stock : {item.currentInventory}</p>
+                                        <p className="m-0 pl-20 font-semibold">
                                             {DENOMINATION + item.price}
                                         </p>
                                     </div>
-                                    <div className="flex items-center m-0 ml-10 text-gray-900 text-s cursor-pointer">
+                                    <div className="flex items-center m-0 ml-10 text-s cursor-pointer">
                                         <FaTimes onClick={() => this.deleteItem(index)} />
                                         <p role="button" onClick={() => this.editItem(item, index)} className="text-sm ml-10 m-0">Edit</p>
                                     </div>

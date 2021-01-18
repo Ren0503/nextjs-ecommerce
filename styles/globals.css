@@ -8,7 +8,6 @@
   src: url("/fonts/Eina.otf");
 }
 
-
 @font-face {
   font-family: "Eina Light";
   src: url("/fonts/Eina-Light.otf");
@@ -19,10 +18,23 @@
   src: url("/fonts/Eina-SemiBold.otf");
 }
 
+@font-face {
+  font-family: 'Lobster';
+  src: url("/fonts/Lobster-Regular.ttf")
+}
+
 @layer base {
   p, h1, h2, h3, h4, h5 {
-    color: rgba(0, 0, 0, .8);
-    font-family: Eina;
+    color: rgba(255, 255, 255, .8);
+    font-family: Lobster;
+  }
+
+  body {
+    background-image: url('/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
